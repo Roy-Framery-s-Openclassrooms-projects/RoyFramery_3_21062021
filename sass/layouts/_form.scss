@@ -1,0 +1,20 @@
+.location {
+    $color-bg: hsl(0, 0%, 92%);
+    
+    background-color: $color-bg;
+    height: 5.33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // & .fas {
+    //     // position: absolute;
+    // }
+    & input{
+        // border: none;
+        background-color: $color-bg;
+        &:focus{
+            outline: none;
+        }
+    }
+
+} 
