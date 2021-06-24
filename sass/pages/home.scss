@@ -1,0 +1,113 @@
+@import "../utils/functions";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.presentation {
+    text-align: center;
+    height: 287px;
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    padding-top: px-to-em(42);
+    &__head {
+        width: 65%;
+        margin: 0 auto;
+        @include home-headings;
+    }
+    &__text {
+        width: 85%;
+        margin: 0 auto;
+        padding-top: px-to-em(16);
+        font-size: px-to-em(18);
+    }
+    & a {
+        padding-top: px-to-em(28);
+    }
+}
+
+.functioning {
+    padding-bottom: 42px;
+    &__head {
+        @include home-headings;
+        width: 90%;
+        margin: 50px auto 32px auto;
+    }
+    &__card{
+        width: 85%;
+        margin-left: 8%;
+        height: px-to-em(72);
+        background: $light-grey;
+        border-radius: px-to-em(20);
+        box-shadow: 0px 5px 10px #E5E5E5;
+        display: flex;
+        align-items: center;
+        margin-bottom: px-to-em(26);
+        position: relative;
+        text-decoration: none;
+        color: hsl(0, 0%, 0%);
+        
+        &:hover {
+            background-color: lighten($color-primary, 35);
+            & > .functioning__icon {
+                color: $color-primary;
+            }
+        }
+        &--active{
+            background-color: lighten($color-primary, 35);
+            & > .functioning__icon {
+                color: $color-primary;
+            }
+        }
+    }
+    &__number {
+        position: absolute;
+        left: -12px;
+        color: hsl(0, 0%, 100%);
+        background: $color-primary;
+        width: px-to-em(24);
+        height: px-to-em(24);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: px-to-em(14);
+    }
+    &__icon {
+        display: flex;
+        width: 20px;
+        color: #7E7E7E;
+        margin-left: 34px;
+    }
+    &__text {
+        font-weight: bold;
+        margin-left: 22px;
+    }
+}
+
+.restaurants-list {
+    background: $light-grey;
+    &__head {
+        @include home-headings;
+        width: 90%;
+        margin: auto;
+        padding: 50px 0 32px 0;
+    }
+    &__card {
+        display: block;
+        width: 90%;
+        height: 251px;
+        margin: auto;
+        background: hsl(0, 0%, 100%);
+        border-radius: px-to-em(30);
+        text-decoration: none;
+        color: hsl(0, 0%, 0%)
+    }
+    &__image {
+        @include image-card;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        height: 77px;
+    }
+}

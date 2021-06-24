@@ -2,19 +2,23 @@
     $color-bg: hsl(0, 0%, 92%);
     
     background-color: $color-bg;
-    height: 5.33vh;
+    height: px-to-em(50);
     display: flex;
     justify-content: center;
     align-items: center;
-    // & .fas {
-    //     // position: absolute;
-    // }
-    & input{
-        // border: none;
-        background-color: $color-bg;
+    &__form{
+        width: px-to-em(154);
+        display: flex;
+        justify-content: space-between;
+    }
+    & select{
+        background: none;
+        border: none;
+        appearance: none;
+        font-weight: bold;
+        width: px-to-em(150);
         &:focus{
             outline: none;
         }
     }
-
 } 

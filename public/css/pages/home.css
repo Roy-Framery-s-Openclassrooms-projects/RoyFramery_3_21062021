@@ -1,0 +1,142 @@
+.presentation {
+  text-align: center;
+  height: 287px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.625em;
+}
+.presentation__head {
+  width: 65%;
+  margin: 0 auto;
+  font-size: 1.375em;
+  font-weight: bold;
+}
+.presentation__text {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 1em;
+  font-size: 1.125em;
+}
+.presentation a {
+  padding-top: 1.75em;
+}
+
+.functioning {
+  padding-bottom: 42px;
+}
+.functioning__head {
+  font-size: 1.375em;
+  font-weight: bold;
+  width: 90%;
+  margin: 50px auto 32px auto;
+}
+.functioning__card {
+  width: 85%;
+  margin-left: 8%;
+  height: 4.5em;
+  background: whitesmoke;
+  border-radius: 1.25em;
+  box-shadow: 0px 5px 10px #E5E5E5;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.625em;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+.functioning__card:hover {
+  background-color: #f1eafb;
+}
+.functioning__card:hover > .functioning__icon {
+  color: #9256dc;
+}
+.functioning__card--active {
+  background-color: #f1eafb;
+}
+.functioning__card--active > .functioning__icon {
+  color: #9256dc;
+}
+.functioning__number {
+  position: absolute;
+  left: -12px;
+  color: white;
+  background: #9256dc;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875em;
+}
+.functioning__icon {
+  display: flex;
+  width: 20px;
+  color: #7E7E7E;
+  margin-left: 34px;
+}
+.functioning__text {
+  font-weight: bold;
+  margin-left: 22px;
+}
+
+.restaurants-list {
+  background: whitesmoke;
+}
+.restaurants-list__head {
+  font-size: 1.375em;
+  font-weight: bold;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0 32px 0;
+}
+.restaurants-list__card {
+  display: block;
+  width: 90%;
+  height: 251px;
+  margin: auto;
+  background: white;
+  border-radius: 1.875em;
+  text-decoration: none;
+  color: black;
+}
+.restaurants-list__image--1 {
+  background-image: url("../../../public/images/restaurants/la_palette_du_gout.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 175px;
+  width: auto;
+  border-radius: 0.9375rem 0.9375rem 0 0;
+}
+.restaurants-list__image--2 {
+  background-image: url("../../../public/images/restaurants/la_note_enchantee.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 175px;
+  width: auto;
+  border-radius: 0.9375rem 0.9375rem 0 0;
+}
+.restaurants-list__image--3 {
+  background-image: url("../../../public/images/restaurants/a_la_francaise.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 175px;
+  width: auto;
+  border-radius: 0.9375rem 0.9375rem 0 0;
+}
+.restaurants-list__image--4 {
+  background-image: url("../../../public/images/restaurants/Le_delice_des_sens.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 175px;
+  width: auto;
+  border-radius: 0.9375rem 0.9375rem 0 0;
+}
+.restaurants-list__content {
+  display: flex;
+  justify-content: space-between;
+  height: 77px;
+}
+
+/*# sourceMappingURL=home.css.map */

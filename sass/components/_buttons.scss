@@ -1,8 +1,11 @@
 .btn {
+    width: px-to-em(218);
     background: linear-gradient($color-secondary, $color-primary);
     border: none;
-    padding: 18px 22px;
-    border-radius: 30px;
+    padding: px-to-em(18);
+    border-radius: px-to-em(30);
     color: white;
     box-shadow: 0 0.54vh 1.06vh #b3b3b3;
+    font-size: px-to-em(16);
+    cursor: pointer;
 }

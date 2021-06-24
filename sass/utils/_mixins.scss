@@ -1,0 +1,28 @@
+@mixin headings {
+    h1, h2, h3, h4, h5, h6 {
+        @content
+    }
+}
+
+@mixin home-headings {
+    font-size: px-to-em(22);
+    font-weight: bold;
+}
+
+$restaurants: ( "la_palette_du_gout", "la_note_enchantee", "a_la_francaise", "Le_delice_des_sens");
+@mixin image-card {
+
+    @for $i from 1 through 4 {
+        $path: "../../../public/images/restaurants/";
+        $restaurant-name : nth($restaurants, $i);
+        &--#{$i} {
+            background-image: url($path + $restaurant-name+ ".jpg");
+            background-size: cover;
+            background-position: center;
+            height: 175px;
+            width: auto;
+            border-radius: 0.9375rem 0.9375rem 0 0
+        }
+    } 
+}
+
