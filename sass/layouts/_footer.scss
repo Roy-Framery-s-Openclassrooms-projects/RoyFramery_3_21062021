@@ -1,4 +1,26 @@
 footer{
     background-color: #353535;
     color: white;
+    height: px-to-em(197);
+}
+.footer {
+    width: 85%;
+    margin: auto;
+    &__head {
+        padding: px-to-em(24) 0 px-to-em(22) 0;
+    }
+    &__text {
+        display: block;
+        margin-bottom: px-to-em(6);
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+    }
+    &__icon {
+        width: 22px;
+        &--rotate {
+            transform: scale(0.8,1);
+            margin-left: px-to-em(-4);
+            margin-right: px-to-em(6);
+        }
+    }
 }

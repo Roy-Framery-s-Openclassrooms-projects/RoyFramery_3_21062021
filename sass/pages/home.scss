@@ -86,6 +86,7 @@
 
 .restaurants-list {
     background: $light-grey;
+    padding-bottom: px-to-em(46);
     &__head {
         @include home-headings;
         width: 90%;
@@ -96,18 +97,36 @@
         display: block;
         width: 90%;
         height: 251px;
-        margin: auto;
+        margin: 0 auto px-to-em(18) auto;
         background: hsl(0, 0%, 100%);
         border-radius: px-to-em(30);
         text-decoration: none;
-        color: hsl(0, 0%, 0%)
+        color: hsl(0, 0%, 0%);
+        box-shadow: 0px 5px 10px #E5E5E5;
     }
     &__image {
+        position: relative;
         @include image-card;
+        @include new-restaurant;
     }
     &__content {
+        width: 92%;
+        margin: auto;
+        height: 77px;
         display: flex;
         justify-content: space-between;
-        height: 77px;
+        font-size: px-to-em(18);
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: px-to-em(20);
+    }
+    &__head-card {
+        font-weight: bold;
+    }
+    &__heart {
+        margin: px-to-em(23) px-to-em(11) 0 0;
     }
 }

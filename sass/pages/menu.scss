@@ -1,3 +1,46 @@
-body{
-    color: red !important; 
+@import "../utils/variables";
+@import "../utils/functions";
+
+.menu{
+    position: relative;
+    &__image {
+        background-image: url("../../../public/images/restaurants/a_la_francaise.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 258px;
+        width: auto;
+    }
+    &__menu {
+        position: absolute;
+        top: 230px;
+        background-color: $light-grey;
+        border-radius: 30px 30px 0 0; 
+        width: 100%;
+        padding-top: 34px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+    &__head {
+        font-size: 28px;
+    }
+    &__section {
+        width: 90%;
+        margin: auto;
+    }
+
+    &__section-content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__section-card {
+        height: px-to-em(68);
+        background-color: hsl(0, 0%, 100%);
+        margin-bottom: px-to-em(14);
+        box-shadow: 0px 5px 10px #E5E5E5;
+        border-radius: px-to-em(15);
+    }
 }

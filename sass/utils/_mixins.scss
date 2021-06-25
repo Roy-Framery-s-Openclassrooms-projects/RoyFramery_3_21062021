@@ -10,6 +10,7 @@
 }
 
 $restaurants: ( "la_palette_du_gout", "la_note_enchantee", "a_la_francaise", "Le_delice_des_sens");
+$position-image : ("1": 50% 100%, "2": 50% 61%, "3": 50% 100%, "4": 50% 100%);
 @mixin image-card {
 
     @for $i from 1 through 4 {
@@ -18,7 +19,7 @@ $restaurants: ( "la_palette_du_gout", "la_note_enchantee", "a_la_francaise", "Le
         &--#{$i} {
             background-image: url($path + $restaurant-name+ ".jpg");
             background-size: cover;
-            background-position: center;
+            background-position: map-get($position-image, "#{$i}");
             height: 175px;
             width: auto;
             border-radius: 0.9375rem 0.9375rem 0 0
@@ -26,3 +27,22 @@ $restaurants: ( "la_palette_du_gout", "la_note_enchantee", "a_la_francaise", "Le
     } 
 }
 
+@mixin new-restaurant {
+    &--new{
+        &::before{
+            content: "Nouveau";
+            width: px-to-em(80);
+            height: px-to-em(29);
+            background: $color-tertiary;
+            color: darken($color-tertiary, 40);
+            font-weight: bold;
+            border-radius: px-to-em(2);
+            position: absolute;
+            right: px-to-em(12);
+            top: px-to-em(13);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
