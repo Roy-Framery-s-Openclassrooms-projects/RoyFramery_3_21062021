@@ -11,7 +11,7 @@
 
 $restaurants: ( "la_palette_du_gout", "la_note_enchantee", "a_la_francaise", "Le_delice_des_sens");
 $position-image : ("1": 50% 100%, "2": 50% 61%, "3": 50% 100%, "4": 50% 100%);
-@mixin image-card {
+@mixin home-image-card {
 
     @for $i from 1 through 4 {
         $path: "../../../public/images/restaurants/";
@@ -23,6 +23,20 @@ $position-image : ("1": 50% 100%, "2": 50% 61%, "3": 50% 100%, "4": 50% 100%);
             height: 175px;
             width: auto;
             border-radius: 0.9375rem 0.9375rem 0 0
+        }
+    } 
+}
+
+@mixin menu-image {
+    @for $i from 1 through 4 {
+        $path: "../../../public/images/restaurants/";
+        $restaurant-name : nth($restaurants, $i);
+        &--#{$i} {
+            background-image: url($path + $restaurant-name+ ".jpg");
+            background-size: cover;
+            background-position: center;
+            height: 258px;
+            width: auto;
         }
     } 
 }

@@ -1,18 +1,50 @@
-.menu {
+.header {
   position: relative;
 }
-.menu__image {
+.header__arrow {
+  position: absolute;
+  top: 1.75em;
+  left: 1.4375em;
+  color: black;
+}
+
+.menu {
+  position: relative;
+  background: whitesmoke;
+}
+.menu__image--1 {
+  background-image: url("../../../public/images/restaurants/la_palette_du_gout.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 258px;
+  width: auto;
+}
+.menu__image--2 {
+  background-image: url("../../../public/images/restaurants/la_note_enchantee.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 258px;
+  width: auto;
+}
+.menu__image--3 {
   background-image: url("../../../public/images/restaurants/a_la_francaise.jpg");
   background-size: cover;
   background-position: center;
   height: 258px;
   width: auto;
 }
+.menu__image--4 {
+  background-image: url("../../../public/images/restaurants/Le_delice_des_sens.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 258px;
+  width: auto;
+}
 .menu__menu {
-  position: absolute;
-  top: 230px;
+  position: relative;
+  top: -40px;
   background-color: whitesmoke;
-  border-radius: 30px 30px 0 0;
+  border-radius: 40px 40px 0 0;
   width: 100%;
   padding-top: 34px;
 }
@@ -25,13 +57,29 @@
 .menu__head {
   font-size: 28px;
 }
+.menu__heart {
+  display: flex;
+  align-items: center;
+  padding-right: 1.25em;
+}
 .menu__section {
   width: 90%;
   margin: auto;
+  margin-top: 1.8125em;
 }
-.menu__section-content {
+.menu__section-head {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+.menu__section-head::before {
+  content: "";
+  width: 2.5em;
+  height: 0.1875em;
+  background: #98e2cf;
+  margin-top: 0.3125em;
+}
+.menu__section-cards {
+  margin-top: 0.9375em;
 }
 .menu__section-card {
   height: 4.25em;
@@ -39,6 +87,31 @@
   margin-bottom: 0.875em;
   box-shadow: 0px 5px 10px #E5E5E5;
   border-radius: 0.9375em;
+  display: flex;
+}
+.menu__section-content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__section-dish {
+  font-weight: bold;
+}
+.menu__section-accompaniment {
+  font-size: 0.875em;
+  margin-top: 0.3125em;
+}
+.menu__section-price {
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+}
+.menu__button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5.1875em;
 }
 
 /*# sourceMappingURL=menu.css.map */

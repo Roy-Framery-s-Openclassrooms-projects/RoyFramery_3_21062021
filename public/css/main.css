@@ -63,19 +63,20 @@ td, th {
   color: white;
   box-shadow: 0 0.54vh 1.06vh #b3b3b3;
   font-size: 1em;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.header__hearding {
+.header__heading {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   box-shadow: 0 0.11vh 0.54vh #b3b3b3;
 }
-.header__hearding img {
-  margin: 2.35vh 0 1.28vh 0;
-  width: 154px;
+.header__heading img {
+  margin: 23px 0 1.28vh 0;
+  width: 9.625em;
 }
 
 footer {

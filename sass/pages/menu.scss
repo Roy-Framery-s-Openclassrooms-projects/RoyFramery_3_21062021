@@ -1,20 +1,27 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 @import "../utils/functions";
 
+.header {
+    position: relative;
+    &__arrow {
+        position: absolute;
+        top: px-to-em(28);
+        left: px-to-em(23);
+        color: hsl(0, 0%, 0%);
+    }
+}
 .menu{
     position: relative;
+    background: $light-grey;
     &__image {
-        background-image: url("../../../public/images/restaurants/a_la_francaise.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 258px;
-        width: auto;
+        @include menu-image;
     }
     &__menu {
-        position: absolute;
-        top: 230px;
+        position: relative;
+        top: -40px;
         background-color: $light-grey;
-        border-radius: 30px 30px 0 0; 
+        border-radius: 40px 40px 0 0; 
         width: 100%;
         padding-top: 34px;
     }
@@ -27,20 +34,62 @@
     &__head {
         font-size: 28px;
     }
+    &__heart {
+        display: flex;
+        align-items: center;
+        padding-right: px-to-em(20);
+    }
     &__section {
         width: 90%;
         margin: auto;
+        margin-top: px-to-em(29);
+        &-head {
+            display: flex;
+            flex-direction: column-reverse;
+            &::before {
+                content: "";
+                width: px-to-em(40);
+                height: px-to-em(3);
+                background: $color-tertiary;
+                margin-top: px-to-em(5);
+            }
+        }
+        &-cards{
+            margin-top: px-to-em(15);
+        }
+        &-card {
+            height: px-to-em(68);
+            background-color: hsl(0, 0%, 100%);
+            margin-bottom: px-to-em(14);
+            box-shadow: 0px 5px 10px #E5E5E5;
+            border-radius: px-to-em(15);
+            display: flex;
+        }
+        &-content {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-dish {
+            font-weight: bold;
+        }
+        &-accompaniment {
+            font-size: px-to-em(14);
+            margin-top: px-to-em(5);
+        }
+        &-price {
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+        }
     }
 
-    &__section-content {
+    &__button {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;    
+        text-align: center;
+        padding-bottom: px-to-em(83);
     }
-    &__section-card {
-        height: px-to-em(68);
-        background-color: hsl(0, 0%, 100%);
-        margin-bottom: px-to-em(14);
-        box-shadow: 0px 5px 10px #E5E5E5;
-        border-radius: px-to-em(15);
-    }
+
 }

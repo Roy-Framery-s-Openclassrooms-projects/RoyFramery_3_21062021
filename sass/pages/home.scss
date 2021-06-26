@@ -106,7 +106,7 @@
     }
     &__image {
         position: relative;
-        @include image-card;
+        @include home-image-card;
         @include new-restaurant;
     }
     &__content {
