@@ -6,6 +6,16 @@
   flex-direction: column;
   padding-top: 2.625em;
 }
+@media only screen and (min-width: 768px) {
+  .presentation {
+    height: 250px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .presentation {
+    height: 235px;
+  }
+}
 .presentation__head {
   width: 65%;
   margin: 0 auto;
@@ -31,6 +41,14 @@
   width: 90%;
   margin: 50px auto 32px auto;
 }
+@media only screen and (min-width: 768px) {
+  .functioning__cards {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+  }
+}
 .functioning__card {
   width: 85%;
   margin-left: 8%;
@@ -44,6 +62,12 @@
   position: relative;
   text-decoration: none;
   color: black;
+}
+@media only screen and (min-width: 768px) {
+  .functioning__card {
+    margin: 0;
+    width: 30%;
+  }
 }
 .functioning__card:hover {
   background-color: #f1eafb;
@@ -76,9 +100,19 @@
   color: #7E7E7E;
   margin-left: 34px;
 }
+@media only screen and (min-width: 768px) {
+  .functioning__icon {
+    margin-left: 1.5625em;
+  }
+}
 .functioning__text {
   font-weight: bold;
   margin-left: 22px;
+}
+@media only screen and (min-width: 768px) {
+  .functioning__text {
+    margin-left: 1.125em;
+  }
 }
 
 .restaurants-list {
@@ -92,6 +126,23 @@
   margin: auto;
   padding: 50px 0 32px 0;
 }
+@media only screen and (min-width: 768px) {
+  .restaurants-list__cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants-list__cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
 .restaurants-list__card {
   display: block;
   width: 90%;
@@ -103,40 +154,39 @@
   color: black;
   box-shadow: 0px 5px 10px #E5E5E5;
 }
+@media only screen and (min-width: 768px) {
+  .restaurants-list__card {
+    width: 47%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants-list__card {
+    width: 31%;
+    margin: 0 0 3.125em 0;
+  }
+}
 .restaurants-list__image {
   position: relative;
+  height: 175px;
+  width: auto;
+  background-size: cover;
+  border-radius: 1.875em 1.875em 0 0;
 }
 .restaurants-list__image--1 {
   background-image: url("../../../public/images/restaurants/la_palette_du_gout.jpg");
-  background-size: cover;
   background-position: 50% 100%;
-  height: 175px;
-  width: auto;
-  border-radius: 0.9375rem 0.9375rem 0 0;
 }
 .restaurants-list__image--2 {
   background-image: url("../../../public/images/restaurants/la_note_enchantee.jpg");
-  background-size: cover;
   background-position: 50% 61%;
-  height: 175px;
-  width: auto;
-  border-radius: 0.9375rem 0.9375rem 0 0;
 }
 .restaurants-list__image--3 {
   background-image: url("../../../public/images/restaurants/a_la_francaise.jpg");
-  background-size: cover;
   background-position: 50% 100%;
-  height: 175px;
-  width: auto;
-  border-radius: 0.9375rem 0.9375rem 0 0;
 }
 .restaurants-list__image--4 {
   background-image: url("../../../public/images/restaurants/Le_delice_des_sens.jpg");
-  background-size: cover;
   background-position: 50% 100%;
-  height: 175px;
-  width: auto;
-  border-radius: 0.9375rem 0.9375rem 0 0;
 }
 .restaurants-list__image--new::before {
   content: "Nouveau";
@@ -152,6 +202,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants-list__image {
+    background-position: 50% 60%;
+  }
 }
 .restaurants-list__content {
   width: 92%;

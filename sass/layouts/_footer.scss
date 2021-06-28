@@ -6,6 +6,10 @@ footer{
 .footer {
     width: 85%;
     margin: auto;
+
+    @include media-query(large) {
+        width: 90%;
+    }
     &__head {
         padding: px-to-em(24) 0 px-to-em(22) 0;
     }

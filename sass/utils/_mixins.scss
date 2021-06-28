@@ -18,11 +18,7 @@ $position-image : ("1": 50% 100%, "2": 50% 61%, "3": 50% 100%, "4": 50% 100%);
         $restaurant-name : nth($restaurants, $i);
         &--#{$i} {
             background-image: url($path + $restaurant-name+ ".jpg");
-            background-size: cover;
             background-position: map-get($position-image, "#{$i}");
-            height: 175px;
-            width: auto;
-            border-radius: 0.9375rem 0.9375rem 0 0
         }
     } 
 }
@@ -33,10 +29,6 @@ $position-image : ("1": 50% 100%, "2": 50% 61%, "3": 50% 100%, "4": 50% 100%);
         $restaurant-name : nth($restaurants, $i);
         &--#{$i} {
             background-image: url($path + $restaurant-name+ ".jpg");
-            background-size: cover;
-            background-position: center;
-            height: 258px;
-            width: auto;
         }
     } 
 }

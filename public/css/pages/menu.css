@@ -12,33 +12,32 @@
   position: relative;
   background: whitesmoke;
 }
-.menu__image--1 {
-  background-image: url("../../../public/images/restaurants/la_palette_du_gout.jpg");
+.menu__image {
   background-size: cover;
   background-position: center;
   height: 258px;
   width: auto;
+}
+.menu__image--1 {
+  background-image: url("../../../public/images/restaurants/la_palette_du_gout.jpg");
 }
 .menu__image--2 {
   background-image: url("../../../public/images/restaurants/la_note_enchantee.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 258px;
-  width: auto;
 }
 .menu__image--3 {
   background-image: url("../../../public/images/restaurants/a_la_francaise.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 258px;
-  width: auto;
 }
 .menu__image--4 {
   background-image: url("../../../public/images/restaurants/Le_delice_des_sens.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 258px;
-  width: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .menu__image::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: inherit;
+  }
 }
 .menu__menu {
   position: relative;
@@ -48,11 +47,28 @@
   width: 100%;
   padding-top: 34px;
 }
+@media only screen and (min-width: 1024px) {
+  .menu__menu {
+    top: 0;
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+}
 .menu__header {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .menu__header {
+    width: 95%;
+    position: absolute;
+    top: -60px;
+    left: 1.25em;
+    color: white;
+  }
 }
 .menu__head {
   font-size: 28px;
@@ -61,6 +77,7 @@
   display: flex;
   align-items: center;
   padding-right: 1.25em;
+  cursor: pointer;
 }
 .menu__section {
   width: 90%;
@@ -88,6 +105,12 @@
   box-shadow: 0px 5px 10px #E5E5E5;
   border-radius: 0.9375em;
   display: flex;
+}
+@media only screen and (min-width: 1024px) {
+  .menu__section-card {
+    width: 90%;
+    margin-bottom: 2.1875em;
+  }
 }
 .menu__section-content {
   width: 90%;
