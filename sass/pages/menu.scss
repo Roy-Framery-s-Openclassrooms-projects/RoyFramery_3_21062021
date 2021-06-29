@@ -2,6 +2,7 @@
 @import "../utils/mixins";
 @import "../utils/functions";
 @import "../utils/breakpoints";
+@import "../components/checked";
 
 .header {
     position: relative;
@@ -10,6 +11,10 @@
         top: px-to-em(28);
         left: px-to-em(23);
         color: hsl(0, 0%, 0%);
+
+        &:hover {
+            color: darken($color-primary, 10);
+        }
     }
 }
 .menu{

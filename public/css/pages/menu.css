@@ -7,6 +7,9 @@
   left: 1.4375em;
   color: black;
 }
+.header__arrow:hover {
+  color: #772bd4;
+}
 
 .menu {
   position: relative;
@@ -28,7 +31,7 @@
   background-image: url("../../../public/images/restaurants/a_la_francaise.jpg");
 }
 .menu__image--4 {
-  background-image: url("../../../public/images/restaurants/Le_delice_des_sens.jpg");
+  background-image: url("../../../public/images/restaurants/le_delice_des_sens.jpg");
 }
 @media only screen and (min-width: 1024px) {
   .menu__image::before {

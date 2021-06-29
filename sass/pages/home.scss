@@ -63,14 +63,15 @@
         position: relative;
         text-decoration: none;
         color: hsl(0, 0%, 0%);
-        
+        transition: background 300ms;
+
         @include media-query(medium) {
             margin: 0;
             width: 30%;
         }
 
         &:hover {
-            background-color: lighten($color-primary, 35);
+            background: lighten($color-primary, 35);
             & > .functioning__icon {
                 color: $color-primary;
             }

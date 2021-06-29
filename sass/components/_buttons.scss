@@ -1,13 +1,43 @@
 /* component */ 
+$lightness: 3;
+$light-primary: lighten($color-primary, $lightness);
+$light-secondary: lighten($color-secondary, $lightness);
+$clr-btn: linear-gradient($color-secondary, $color-primary);
+$light-btn: linear-gradient($light-secondary, $light-primary);
+$clr-shadow: #b3b3b3;
+$darkness-shadow: 25;
 .btn {
     width: px-to-em(218);
-    background: linear-gradient($color-secondary, $color-primary);
+    background: $clr-btn;
     border: none;
     padding: px-to-em(18);
     border-radius: px-to-em(30);
     color: white;
-    box-shadow: 0 0.54vh 1.06vh #b3b3b3;
+    box-shadow: 0 px-to-em(5) px-to-em(10) $clr-shadow;
     font-size: px-to-em(16);
     text-decoration: none;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $light-btn;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: px-to-em(30);
+        box-shadow: 0 px-to-em(5) px-to-em(10) darken($clr-shadow, $darkness-shadow);
+    }
 }
