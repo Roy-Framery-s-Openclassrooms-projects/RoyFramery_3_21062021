@@ -100,7 +100,7 @@
             box-shadow: 0px 5px 10px #E5E5E5;
             border-radius: px-to-em(15);
             display: flex;
-
+            position: relative;
             @include media-query(large) {
                 width: 90%;
                 margin-bottom: px-to-em(35);

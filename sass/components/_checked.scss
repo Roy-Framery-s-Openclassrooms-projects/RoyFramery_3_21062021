@@ -1,0 +1,123 @@
+$checked-box: (width: 80px, height: 68px);
+
+.menu{
+    &__checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-tertiary;
+        position: absolute;
+        right: 0;
+        height: map-get($checked-box, height);
+        width: map-get($checked-box, width);
+        color: hsl(0, 0%, 100%);
+        border-radius: 0 px-to-em(15) px-to-em(15) 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        & i {
+            font-size: 1.5em;
+            transform: rotate(90deg);
+        }
+    }
+    &__section-card {
+        &:hover {
+            cursor: pointer;
+            & > .menu__checkbox {
+                animation: slide-left 300ms both;
+            }
+            & i {
+                animation: rotate 300ms both linear; 
+            }
+            & .menu__section-content {
+                animation: reduce-width 300ms both;
+            }
+            & .menu__section-text {
+                display: block;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-right: px-to-em(15);
+            }
+            & .menu__section-price {
+                margin-right: px-to-em(15);
+            }
+            & .menu__section-dish {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .menu__section-accompaniment {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &:not(:hover) {
+            & > .menu__checkbox {
+                animation: slide-right 300ms both;
+            }
+            & .menu__section-content {
+                animation: increase-width 300ms both linear;
+            }& i {
+                animation: translate 300ms both linear; 
+            }
+        }
+    }
+}
+@keyframes slide-left {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes slide-right {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(50px) rotate(90deg);
+    }
+    50% {
+        transform: translate(35px) rotate(180deg);
+    }
+    70% {
+        transform: translate(25px) rotate(270deg);
+    }
+    100% {
+        transform: translate(0) rotate(360deg);
+    }
+}
+@keyframes translate {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(50px);
+    }
+}
+
+@keyframes reduce-width {
+    0% {
+        
+        margin: auto 0 auto 5%;
+    }
+    100% {
+        width: 70%;
+        margin: auto 5% auto 5%;
+    }
+}
+@keyframes increase-width {
+    0% {
+        margin: auto 5% auto 5% ;
+        width: 70%;
+    }
+    100% {
+        margin: auto 5% auto 5%;
+        width: 90%;
+    }
+}

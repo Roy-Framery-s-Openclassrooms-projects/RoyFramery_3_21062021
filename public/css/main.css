@@ -193,6 +193,120 @@ footer {
   outline: none;
 }
 
+.menu__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #98e2cf;
+  position: absolute;
+  right: 0;
+  height: 68px;
+  width: 80px;
+  color: white;
+  border-radius: 0 0.9375em 0.9375em 0;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.menu__checkbox i {
+  font-size: 1.5em;
+  transform: rotate(90deg);
+}
+.menu__section-card:hover {
+  cursor: pointer;
+}
+.menu__section-card:hover > .menu__checkbox {
+  animation: slide-left 300ms both;
+}
+.menu__section-card:hover i {
+  animation: rotate 300ms both linear;
+}
+.menu__section-card:hover .menu__section-content {
+  animation: reduce-width 300ms both;
+}
+.menu__section-card:hover .menu__section-text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 0.9375em;
+}
+.menu__section-card:hover .menu__section-price {
+  margin-right: 0.9375em;
+}
+.menu__section-card:hover .menu__section-dish {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__section-card:hover .menu__section-accompaniment {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__section-card:not(:hover) > .menu__checkbox {
+  animation: slide-right 300ms both;
+}
+.menu__section-card:not(:hover) .menu__section-content {
+  animation: increase-width 300ms both linear;
+}
+.menu__section-card:not(:hover) i {
+  animation: translate 300ms both linear;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: translate(50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(35px) rotate(180deg);
+  }
+  70% {
+    transform: translate(25px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0) rotate(360deg);
+  }
+}
+@keyframes translate {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(50px);
+  }
+}
+@keyframes reduce-width {
+  0% {
+    margin: auto 0 auto 5%;
+  }
+  100% {
+    width: 70%;
+    margin: auto 5% auto 5%;
+  }
+}
+@keyframes increase-width {
+  0% {
+    margin: auto 5% auto 5%;
+    width: 70%;
+  }
+  100% {
+    margin: auto 5% auto 5%;
+    width: 90%;
+  }
+}
 .presentation {
   text-align: center;
   height: 287px;
