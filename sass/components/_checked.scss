@@ -40,11 +40,7 @@ $checked-box: (width: 80px, height: 68px);
             & .menu__section-price {
                 margin-right: px-to-em(15);
             }
-            & .menu__section-dish {
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            & .menu__section-accompaniment {
+            & .menu__section-dish, .menu__section-accompaniment {
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
@@ -61,6 +57,7 @@ $checked-box: (width: 80px, height: 68px);
         }
     }
 }
+
 @keyframes slide-left {
     0% {
         transform: scaleX(0);

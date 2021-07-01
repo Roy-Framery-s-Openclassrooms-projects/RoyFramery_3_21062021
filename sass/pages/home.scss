@@ -1,8 +1,7 @@
-@import "../utils/functions";
-@import "../utils/mixins";
-@import "../utils/variables";
-@import "../utils/breakpoints";
+@import "../main";
 @import "../components/checked";
+@import "../components/loading-spinner";
+
 
 .presentation {
     text-align: center;

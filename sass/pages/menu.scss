@@ -1,7 +1,4 @@
-@import "../utils/variables";
-@import "../utils/mixins";
-@import "../utils/functions";
-@import "../utils/breakpoints";
+@import "../main";
 @import "../components/checked";
 
 .header {
@@ -132,5 +129,13 @@
         text-align: center;
         padding-bottom: px-to-em(83);
     }
+}
 
+@keyframes show-up {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }

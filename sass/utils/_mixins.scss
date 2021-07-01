@@ -52,3 +52,14 @@ $position-image : ("1": 50% 100%, "2": 50% 61%, "3": 50% 100%, "4": 50% 100%);
         }
     }
 }
+
+@mixin circle($color, $diameter, $duration, $delay, $timing) {
+    border: 16px solid $light-grey;
+    border-top: 16px solid $color;
+    border-left: 16px solid $color;
+    border-radius: 50%;
+    width: $diameter;
+    height: $diameter;
+    animation: spin $duration $delay $timing infinite;
+
+}
