@@ -101,7 +101,7 @@ td, th {
   z-index: 2;
   animation: heart 150ms forwards ease-in-out;
   padding-top: 2px;
-  margin-top: -2px;
+  margin-top: -3px;
 }
 .restaurants-list__heart i::after, .menu__heart i::after {
   content: "";
@@ -396,7 +396,7 @@ footer {
 .menu__heart {
   display: flex;
   align-items: center;
-  padding-right: 1.25em;
+  margin-right: 1.25em;
   cursor: pointer;
 }
 .menu__section {
@@ -407,7 +407,7 @@ footer {
 .menu__section-head {
   display: flex;
   flex-direction: column-reverse;
-  animation: show-up 400ms both;
+  animation: show-up 500ms both;
   transform-origin: bottom;
 }
 .menu__section-head::before {
@@ -416,7 +416,7 @@ footer {
   height: 0.1875em;
   background: #98e2cf;
   margin-top: 0.3125em;
-  animation: underligned-title 300ms 100ms both;
+  animation: underligned-title 500ms 100ms both;
   transform-origin: left;
 }
 .menu__section-cards {
@@ -432,19 +432,19 @@ footer {
   position: relative;
 }
 .menu__section-card:nth-of-type(1) {
-  animation: show-up 400ms 100ms both;
+  animation: show-up 600ms 120ms both;
   transform-origin: bottom;
 }
 .menu__section-card:nth-of-type(2) {
-  animation: show-up 400ms 200ms both;
+  animation: show-up 600ms 240ms both;
   transform-origin: bottom;
 }
 .menu__section-card:nth-of-type(3) {
-  animation: show-up 400ms 300ms both;
+  animation: show-up 600ms 360ms both;
   transform-origin: bottom;
 }
 .menu__section-card:nth-of-type(4) {
-  animation: show-up 400ms 400ms both;
+  animation: show-up 600ms 480ms both;
   transform-origin: bottom;
 }
 @media only screen and (min-width: 1024px) {

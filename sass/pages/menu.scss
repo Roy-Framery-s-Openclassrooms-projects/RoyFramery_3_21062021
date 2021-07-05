@@ -69,7 +69,7 @@
     &__heart {
         display: flex;
         align-items: center;
-        padding-right: px-to-em(20);
+        margin-right: px-to-em(20);
         cursor: pointer;
     }
     &__section {
@@ -79,7 +79,7 @@
         &-head {
             display: flex;
             flex-direction: column-reverse;
-            animation: show-up 400ms both;
+            animation: show-up 500ms both;
             transform-origin: bottom;    
             &::before {
                 content: "";
@@ -87,7 +87,7 @@
                 height: px-to-em(3);
                 background: $color-tertiary;
                 margin-top: px-to-em(5);
-                animation: underligned-title 300ms 100ms both;
+                animation: underligned-title 500ms 100ms both;
                 transform-origin: left;
             }
         }
@@ -104,8 +104,8 @@
             position: relative;
             @for $i from 1 through 4 {
                 &:nth-of-type(#{$i}) {
-                    $delay: 100ms * $i;
-                    animation: show-up 400ms $delay both;
+                    $delay: 120ms * $i;
+                    animation: show-up 600ms $delay both;
                     transform-origin: bottom; 
                 }
             }
