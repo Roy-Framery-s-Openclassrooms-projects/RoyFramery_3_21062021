@@ -32,7 +32,6 @@ $checked-box: (width: 80px, height: 68px);
                 animation: reduce-width 300ms both;
             }
             & .menu__section-text {
-                display: block;
                 overflow: hidden;
                 white-space: nowrap;
                 margin-right: px-to-em(15);
@@ -43,17 +42,26 @@ $checked-box: (width: 80px, height: 68px);
             & .menu__section-dish, .menu__section-accompaniment {
                 overflow: hidden;
                 text-overflow: ellipsis;
-            }
+            }            
         }
         &:not(:hover) {
+            & .menu__section-text {
+                overflow: hidden;
+                white-space: nowrap;
+            }
             & > .menu__checkbox {
                 animation: slide-right 300ms both;
             }
             & .menu__section-content {
                 animation: increase-width 300ms both linear;
-            }& i {
+            } 
+            & i {
                 animation: translate 300ms both linear; 
             }
+            & .menu__section-dish, .menu__section-accompaniment {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }   
         }
     }
 }

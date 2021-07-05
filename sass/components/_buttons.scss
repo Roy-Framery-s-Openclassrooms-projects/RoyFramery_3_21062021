@@ -5,7 +5,7 @@ $light-secondary: lighten($color-secondary, $lightness);
 $clr-btn: linear-gradient($color-secondary, $color-primary);
 $light-btn: linear-gradient($light-secondary, $light-primary);
 $clr-shadow: #b3b3b3;
-$darkness-shadow: 25;
+$darkness-shadow: 10;
 .btn {
     width: px-to-em(218);
     background: $clr-btn;

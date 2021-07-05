@@ -79,16 +79,20 @@
         &-head {
             display: flex;
             flex-direction: column-reverse;
+            animation: show-up 400ms both;
+            transform-origin: bottom;    
             &::before {
                 content: "";
                 width: px-to-em(40);
                 height: px-to-em(3);
                 background: $color-tertiary;
                 margin-top: px-to-em(5);
+                animation: underligned-title 300ms 100ms both;
+                transform-origin: left;
             }
         }
         &-cards{
-            margin-top: px-to-em(15);
+            margin-top: px-to-em(15);            
         }
         &-card {
             height: px-to-em(68);
@@ -98,6 +102,15 @@
             border-radius: px-to-em(15);
             display: flex;
             position: relative;
+            @for $i from 1 through 4 {
+                &:nth-of-type(#{$i}) {
+                    $delay: 100ms * $i;
+                    animation: show-up 400ms $delay both;
+                    transform-origin: bottom; 
+                }
+            }
+
+    
             @include media-query(large) {
                 width: 90%;
                 margin-bottom: px-to-em(35);
@@ -133,9 +146,21 @@
 
 @keyframes show-up {
     0% {
-        transform: scaleY(0);
+        transform: translateY(30px);
+        opacity: 0;
     }
     100% {
-        transform: scaleY(1);
+        transform: translateY(0);
+        opacity: 1;
     }
 }
+
+@keyframes underligned-title {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+

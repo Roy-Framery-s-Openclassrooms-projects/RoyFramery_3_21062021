@@ -85,7 +85,7 @@ td, th {
   z-index: -1;
   transition: opacity 250ms;
   border-radius: 1.875em;
-  box-shadow: 0 0.3125em 0.625em #737373;
+  box-shadow: 0 0.3125em 0.625em #9a9a9a;
 }
 
 /* Component */
@@ -100,7 +100,8 @@ td, th {
   opacity: 1;
   z-index: 2;
   animation: heart 150ms forwards ease-in-out;
-  transform-origin: 50% 50%;
+  padding-top: 2px;
+  margin-top: -2px;
 }
 .restaurants-list__heart i::after, .menu__heart i::after {
   content: "";
@@ -111,10 +112,14 @@ td, th {
   right: 0;
   bottom: 0;
   left: 0;
-  color: #98e2cf;
   opacity: 0;
   z-index: -1;
   transform: scaleY(0);
+  background-image: linear-gradient(#9256dc, #ff7ad9);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 @keyframes heart {
@@ -224,7 +229,6 @@ footer {
   animation: reduce-width 300ms both;
 }
 .menu__section-card:hover .menu__section-text {
-  display: block;
   overflow: hidden;
   white-space: nowrap;
   margin-right: 0.9375em;
@@ -236,6 +240,10 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu__section-card:not(:hover) .menu__section-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
 .menu__section-card:not(:hover) > .menu__checkbox {
   animation: slide-right 300ms both;
 }
@@ -244,6 +252,10 @@ footer {
 }
 .menu__section-card:not(:hover) i {
   animation: translate 300ms both linear;
+}
+.menu__section-card:not(:hover) .menu__section-dish, .menu__section-card:not(:hover) .menu__section-accompaniment {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @keyframes slide-left {
@@ -395,6 +407,8 @@ footer {
 .menu__section-head {
   display: flex;
   flex-direction: column-reverse;
+  animation: show-up 400ms both;
+  transform-origin: bottom;
 }
 .menu__section-head::before {
   content: "";
@@ -402,6 +416,8 @@ footer {
   height: 0.1875em;
   background: #98e2cf;
   margin-top: 0.3125em;
+  animation: underligned-title 300ms 100ms both;
+  transform-origin: left;
 }
 .menu__section-cards {
   margin-top: 0.9375em;
@@ -414,6 +430,22 @@ footer {
   border-radius: 0.9375em;
   display: flex;
   position: relative;
+}
+.menu__section-card:nth-of-type(1) {
+  animation: show-up 400ms 100ms both;
+  transform-origin: bottom;
+}
+.menu__section-card:nth-of-type(2) {
+  animation: show-up 400ms 200ms both;
+  transform-origin: bottom;
+}
+.menu__section-card:nth-of-type(3) {
+  animation: show-up 400ms 300ms both;
+  transform-origin: bottom;
+}
+.menu__section-card:nth-of-type(4) {
+  animation: show-up 400ms 400ms both;
+  transform-origin: bottom;
 }
 @media only screen and (min-width: 1024px) {
   .menu__section-card {
@@ -448,10 +480,20 @@ footer {
 
 @keyframes show-up {
   0% {
-    transform: scaleY(0);
+    transform: translateY(30px);
+    opacity: 0;
   }
   100% {
-    transform: scaleY(1);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes underligned-title {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
 

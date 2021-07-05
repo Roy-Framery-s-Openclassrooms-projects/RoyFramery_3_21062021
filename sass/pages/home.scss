@@ -151,6 +151,8 @@
         text-decoration: none;
         color: hsl(0, 0%, 0%);
         box-shadow: 0px 5px 10px #E5E5E5;
+        transition: transform 300ms;
+        position: relative;
 
         @include media-query(medium) {
             width: 47%;
@@ -158,6 +160,21 @@
         @include media-query(large) {
             width: 31%;
             margin: 0 0 px-to-em(50) 0;
+        }
+        &::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            position: absolute;
+            border-radius: px-to-em(30);
+            box-shadow: 0px 10px 10px darken($color: #E5E5E5, $amount: 5);
+            transition: opacity 300ms;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
         }
     }
     &__image {
@@ -168,7 +185,7 @@
         border-radius: px-to-em(30) px-to-em(30) 0 0;
         @include home-image-card;
         @include new-restaurant;
-
+        
         @include media-query(large) {
             background-position: 50% 60%;
         }
