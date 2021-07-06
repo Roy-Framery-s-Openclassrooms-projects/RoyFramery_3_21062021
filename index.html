@@ -22,24 +22,24 @@
     </header>
 
     <main>
-        <section class="location">
-            <form class="location__form" action="">
+        <div class="location">
+            <form class="location__form" action="#">
                 <i class="fas fa-map-marker-alt"></i>
-                <select name="" id="">
+                <select name="restaurant" id="restaurants">
                     <option value="">Choisissez un lieu</option>
                     <option value="belleville" selected>Paris, Belleville</option>
                 </select>
             </form>
-        </section>
+        </div>
 
         <section class="presentation">
-            <p class="presentation__head">Réservez le menu qui vous convient</p>
+            <h2 class="presentation__head">Réservez le menu qui vous convient</h2>
             <p class="presentation__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#restaurants-anchor"><button class="btn">Explorer nos restaurants</button></a>
+            <a href="#restaurants-anchor" class="btn">Explorer nos restaurants</a>
         </section>
 
         <section class="functioning">
-            <div class="functioning__head">Fonctionnement</div>
+            <h2 class="functioning__head">Fonctionnement</h2>
             <div class="functioning__cards">
                 <a href="#" class="functioning__card">
                     <div class="functioning__number">1</div>
@@ -60,7 +60,7 @@
         </section>
 
         <section id="restaurants-anchor" class="restaurants-list">
-            <div class="restaurants-list__head">Restaurants</div>
+            <h2 class="restaurants-list__head">Restaurants</h2>
             <div class="restaurants-list__cards">
                 <a href="la-palette-du-gout/index.html" class="restaurants-list__card">
                     <div class="restaurants-list__image restaurants-list__image--1 restaurants-list__image--new"></div>
@@ -108,7 +108,7 @@
 
     <footer>
         <ul class="footer">
-            <h3 class="footer__head">ohmyfood</h3>
+            <li class="footer__head footer__head--title">ohmyfood</li>
             <li>
                 <a class="footer__text" href="">
                     <i class="fas fa-utensils footer__icon"></i>
@@ -127,7 +127,7 @@
                 </a>
             </li>
             <li class="footer__text">
-                <a href="" class="footer__text">Contact</a>
+                <a href="mailto:rick.sanchez@spacemail.burp" class="footer__text">Contact</a>
             </li>
         </ul>
     </footer>

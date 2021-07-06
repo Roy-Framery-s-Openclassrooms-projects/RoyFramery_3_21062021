@@ -4,7 +4,10 @@
   "description": "A site that lists the menus of gourmet restaurants with a reservation system and where customers will be able to compose their meal menu so that the dishes are ready when they arrive !",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/:./public/css/"
+    "sass": "sass --watch ./sass/:./public/css/ ",
+    "quiet": "sass --watch ./sass/:./public/css/ --quiet",
+    "compressed-css": "sass ./sass/:./public/css/ --style=compressed --no-source-map",
+    "expanded-css": "sass ./sass/:./public/css/ --style=expanded"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-$checked-box: (width: 80px, height: 68px);
+$checked-box: (width: 23%, height: 68px);
 
 .menu{
     &__checkbox {
@@ -18,6 +18,10 @@ $checked-box: (width: 80px, height: 68px);
             font-size: 1.5em;
             transform: rotate(90deg);
         }
+
+        @include media-query(medium) {
+            width: 15%;
+        }
     }
     &__section-card {
         &:hover {
@@ -29,7 +33,10 @@ $checked-box: (width: 80px, height: 68px);
                 animation: rotate 300ms both linear; 
             }
             & .menu__section-content {
-                animation: reduce-width 300ms both;
+                animation: reduce-width-small 300ms both;
+                @include media-query(medium) {
+                    animation: reduce-width-medium 300ms both;
+                }        
             }
             & .menu__section-text {
                 overflow: hidden;
@@ -106,13 +113,23 @@ $checked-box: (width: 80px, height: 68px);
     }
 }
 
-@keyframes reduce-width {
+@keyframes reduce-width-small {
     0% {
         
         margin: auto 0 auto 5%;
     }
     100% {
         width: 70%;
+        margin: auto 5% auto 5%;
+    }
+}
+@keyframes reduce-width-medium {
+    0% {
+        
+        margin: auto 0 auto 5%;
+    }
+    100% {
+        width: 78%;
         margin: auto 5% auto 5%;
     }
 }

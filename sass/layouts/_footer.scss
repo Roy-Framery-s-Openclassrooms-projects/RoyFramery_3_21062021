@@ -12,6 +12,7 @@ footer{
     }
     &__head {
         padding: px-to-em(24) 0 px-to-em(22) 0;
+        @include headings;
     }
     &__text {
         display: block;

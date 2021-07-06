@@ -1,6 +1,6 @@
 @import "../main";
 @import "../components/checked";
-@import "../components/loading-spinner";
+// @import "../components/loading-spinner";
 
 
 .presentation {
@@ -9,6 +9,7 @@
     background-color: $light-grey;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: px-to-em(42);
     
     @include media-query(medium) {
@@ -30,8 +31,8 @@
         padding-top: px-to-em(16);
         font-size: px-to-em(18);
     }
-    & a {
-        padding-top: px-to-em(28);
+    & .btn {
+        margin-top: px-to-em(28);
     }
 }
 
