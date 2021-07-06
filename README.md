@@ -6,7 +6,7 @@
 > Github Pages : **https://roy-framery-s-openclassrooms-projects.github.io/RoyFramery_3_21062021/**
 --- 
 
-## Table of Contents 📋
+## Table of Contents
 
 - [Description](#description)
     * [Containtes and Features](#contraints-and-features)
@@ -15,7 +15,7 @@
 - [Installation](#installation)
 - [Author info](#author-info)
 ---
-## Description 📓 
+## Description
 
 ![Légende](https://github.com/Roy-Framery-s-Openclassrooms-projects/RoyFramery_3_21062021/blob/dev/public/images/maquettes_Ohmyfood.png)
 
@@ -44,9 +44,9 @@ __*ohmyfood*__ is the third project I made during this training. As a junior dev
 [Back to the top](#ohmyfood)
 
 ---
-## Tech 🕹️
+## Tech
 
-__*ohmyfood*__ use open source projects to work properly:
+🕹️__*ohmyfood*__ use open source projects to work properly:
 
 - [Sass](https://sass-lang.com/) - CSS enhanced for web apps!
 - [node.js](https://nodejs.org/en/) - To create the project and add depencies
@@ -54,9 +54,9 @@ __*ohmyfood*__ use open source projects to work properly:
 [Back to the top](#ohmyfood)
 
 ---
-## Installation 💽
+## Installation
 
-__*ohmyfood*__ requires [Node.js](https://nodejs.org/) to run.
+💽__*ohmyfood*__ requires [Node.js](https://nodejs.org/) to run.
 
 Clone repository...
 ```sh
@@ -83,7 +83,7 @@ npm run sass
 [Back to the top](#ohmyfood)
 
 ---
-## Author info 📮
+## Author info 
 - LinkedIn - [Roy Framery](https://www.linkedin.com/in/roy-framery/)
 
 [Back to the top](#ohmyfood)
