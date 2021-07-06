@@ -19,7 +19,7 @@
 
 ![Légende](https://github.com/Roy-Framery-s-Openclassrooms-projects/RoyFramery_3_21062021/blob/dev/public/images/maquettes_Ohmyfood.png)
 
-__*ohmyfood*__ is the third project I made during this training. As a junior developer, the goal 🎯 was to integrate, by using only HTML and CSS, the mobile mock up of a website which list restaurants' menues. For this, I had a briefing that notice me some features and contraints to integrate : 
+__*ohmyfood*__ is the third project I made during this training. As a junior developer, the goal 🎯 was to integrate the mobile mock up of a website which list restaurants' menues by using only HTML and CSS. For this, I had a briefing that notice me some features and contraints to integrate : 
 
 ### Contraints and Features
 - Using __*Shrikhand*__ font for Logo and Titles and __*Roboto*__ font for general text
