@@ -46,7 +46,7 @@ __*ohmyfood*__ is the third project I made during this training. As a junior dev
 ---
 ## Tech
 
-🕹️__*ohmyfood*__ use open source projects to work properly:
+🕹️ __*ohmyfood*__ use open source projects to work properly:
 
 - [Sass](https://sass-lang.com/) - CSS enhanced for web apps!
 - [node.js](https://nodejs.org/en/) - To create the project and add depencies
@@ -56,7 +56,7 @@ __*ohmyfood*__ is the third project I made during this training. As a junior dev
 ---
 ## Installation
 
-💽__*ohmyfood*__ requires [Node.js](https://nodejs.org/) to run.
+💽 __*ohmyfood*__ requires [Node.js](https://nodejs.org/) to run.
 
 Clone repository...
 ```sh
