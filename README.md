@@ -17,7 +17,7 @@
 ---
 ## Description 📓 
 
-![Légende](./public/images/maquettes_ohmyfood.png)
+![Légende](https://github.com/Roy-Framery-s-Openclassrooms-projects/RoyFramery_3_21062021/blob/dev/public/images/maquettes_Ohmyfood.png)
 
 __*ohmyfood*__ is the third project I made during this training. As a junior developer, the goal 🎯 was to integrate, by using only HTML and CSS, the mobile mock up of a website which list restaurants' menues. For this, I had a briefing that notice me some features and contraints to integrate : 
 
