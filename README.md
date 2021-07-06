@@ -1,5 +1,5 @@
-# ohmyfood 🍴 
-## _Dynamise web page with CSS animations_ 
+# ohmyfood 
+## _Dynamise web page with CSS animations_ 🍴 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ---  
