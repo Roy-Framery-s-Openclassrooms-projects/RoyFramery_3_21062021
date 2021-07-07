@@ -6,8 +6,8 @@
   "scripts": {
     "sass": "sass --watch ./sass/:./public/css/ ",
     "quiet": "sass --watch ./sass/:./public/css/ --quiet",
-    "compressed-css": "sass ./sass/:./public/css/ --style=compressed --no-source-map",
-    "expanded-css": "sass ./sass/:./public/css/ --style=expanded"
+    "compressed": "sass ./sass/:./public/css/ --style=compressed --no-source-map",
+    "expanded": "sass ./sass/:./public/css/ --style=expanded"
   },
   "repository": {
     "type": "git",

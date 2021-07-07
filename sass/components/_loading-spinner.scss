@@ -15,24 +15,21 @@ $timing: cubic-bezier(.37,0,.2,.99);
     transform-origin: left;
     &__loader {
         @include circle($color-secondary, 120px, $duration, 0s, $timing);
+        z-index: 1;
     }
     &::after {
         content: "";
         @include circle($color-tertiary, 80px, $duration, 150ms, $timing);
         position: absolute;
-
     }
     &::before {
         content: "";
         @include circle($color-primary, 40px, $duration, 300ms, $timing);
         position: absolute;
-
     }
 }
-
 header, main, footer {
-    transform: scale(0);
-    animation: end-loading 0s 3s forwards;
+    animation: blur 3s;
 }
 
 @keyframes spin {
@@ -47,13 +44,19 @@ header, main, footer {
     0% { 
         transform: scaleX(1); 
     }
+    90% {
+        transform: translate(0);
+    }
     100% { 
-        transform: scaleX(1); 
+        transform: scaleX(1) translateX(-100%); 
     }
 }
 
-@keyframes end-loading {
-    100% {
-        transform: scale(1);
+@keyframes blur {
+    0% {
+        filter: blur(3px);
+    }
+    91% {
+        filter: blur(3px);
     }
 }

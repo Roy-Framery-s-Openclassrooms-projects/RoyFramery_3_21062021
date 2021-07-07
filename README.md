@@ -72,7 +72,7 @@ npm i
 To expanded CSS file ...
 
 ```sh
-npm run expanded-css 
+npm run expanded 
 ```
 
 Start the Sass compiler... 

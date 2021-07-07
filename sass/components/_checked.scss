@@ -1,6 +1,22 @@
 $checked-box: (width: 23%, height: 68px);
 
 .menu{
+    &__section {
+        &-content {
+            transition: all 300ms;
+        }
+        & .menu__section-dish, .menu__section-accompaniment {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: text-overflow 300ms;
+        }
+        & .menu__section-text {
+            overflow: hidden;
+            white-space: nowrap;
+            transition: all 300ms;
+        } 
+    }
     &__checkbox {
         display: flex;
         justify-content: center;
@@ -14,9 +30,11 @@ $checked-box: (width: 23%, height: 68px);
         border-radius: 0 px-to-em(15) px-to-em(15) 0;
         transform: scaleX(0);
         transform-origin: right;
+        transition: transform 300ms;
         & i {
             font-size: 1.5em;
-            transform: rotate(90deg);
+            transform: rotate(0);
+            transition: transform 300ms;
         }
 
         @include media-query(medium) {
@@ -27,16 +45,17 @@ $checked-box: (width: 23%, height: 68px);
         &:hover {
             cursor: pointer;
             & > .menu__checkbox {
-                animation: slide-left 300ms both;
+                transform: scaleX(1);
             }
             & i {
-                animation: rotate 300ms both linear; 
+                animation: rotate 300ms 50ms both;
             }
             & .menu__section-content {
-                animation: reduce-width-small 300ms both;
+                width: 70%;
+
                 @include media-query(medium) {
-                    animation: reduce-width-medium 300ms both;
-                }        
+                    width: 78%;
+                }
             }
             & .menu__section-text {
                 overflow: hidden;
@@ -51,108 +70,14 @@ $checked-box: (width: 23%, height: 68px);
                 text-overflow: ellipsis;
             }            
         }
-        &:not(:hover) {
-            & .menu__section-text {
-                overflow: hidden;
-                white-space: nowrap;
-            }
-            & > .menu__checkbox {
-                animation: slide-right 300ms both;
-            }
-            & .menu__section-content {
-                animation: increase-width 300ms both linear;
-
-                @include media-query(medium) {
-                    animation: increase-width-medium 300ms both linear;
-                }
-            } 
-            & i {
-                animation: translate 300ms both linear; 
-            }
-            & .menu__section-dish, .menu__section-accompaniment {
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }   
-        }
-    }
-}
-
-@keyframes slide-left {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}
-@keyframes slide-right {
-    0% {
-        transform: scaleX(1);
-    }
-    100% {
-        transform: scaleX(0);
     }
 }
 
 @keyframes rotate {
-    0% {
-        transform: translate(50px) rotate(90deg);
-    }
-    50% {
-        transform: translate(35px) rotate(180deg);
-    }
-    70% {
-        transform: translate(25px) rotate(270deg);
+    0% { 
+        transform: translate(40px) rotate(90deg);
     }
     100% {
-        transform: translate(0) rotate(360deg);
-    }
-}
-@keyframes translate {
-    0% {
-        transform: translate(0);
-    }
-    100% {
-        transform: translate(50px);
-    }
-}
-
-@keyframes reduce-width-small {
-    0% {
-        
-        margin: auto 0 auto 5%;
-    }
-    100% {
-        width: 70%;
-        margin: auto 5% auto 5%;
-    }
-}
-@keyframes reduce-width-medium {
-    0% {
-        margin: auto 0 auto 5%;
-    }
-    100% {
-        width: 78%;
-        margin: auto 5% auto 5%;
-    }
-}
-@keyframes increase-width {
-    0% {
-        margin: auto 5% auto 5% ;
-        width: 70%;
-    }
-    100% {
-        margin: auto 5% auto 5%;
-        width: 90%;
-    }
-}
-@keyframes increase-width-medium {
-    0% {
-        margin: auto 5% auto 5% ;
-        width: 78%;
-    }
-    100% {
-        margin: auto 5% auto 5%;
-        width: 90%;
+        transform: translate(0) rotate(720deg);
     }
 }
