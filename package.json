@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/:./public/css/ ",
-    "quiet": "sass --watch ./sass/:./public/css/ --quiet",
     "compressed": "sass ./sass/:./public/css/ --style=compressed --no-source-map",
     "expanded": "sass ./sass/:./public/css/ --style=expanded"
   },

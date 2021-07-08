@@ -1,11 +1,12 @@
+@use 'sass:math';
 $font-size: 16;
 @function px-to-em($px, $pxbase: $font-size){
     @if $pxbase == $font-size{
-        $em-size: ($px / $pxbase);
+        $em-size: math.div($px, $pxbase);
         @return $em-size + em;
     }
     @else {
-        $em-size: ($px / $pxbase);
+        $em-size: math.div($px, $pxbase);
         @return $em-size + em;
     }
 }

@@ -29,7 +29,10 @@ $timing: cubic-bezier(.37,0,.2,.99);
     }
 }
 header, main, footer {
-    animation: blur 3s;
+    animation: blur 3000sm;
+}
+body{
+    animation: disable-scroll 3000ms;
 }
 
 @keyframes spin {
@@ -58,5 +61,16 @@ header, main, footer {
     }
     91% {
         filter: blur(3px);
+    }
+}
+@keyframes disable-scroll {
+    0% {
+        overflow-y: hidden;
+    }
+    91% {
+        overflow-y: hidden;
+    }
+    100% {
+        overflow-y: visible;
     }
 }
