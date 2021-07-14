@@ -127,7 +127,7 @@
         padding: 50px 0 32px 0;
     }
     &__cards {
-        @include media-query(medium) {
+        @include media-query(small) {
             display: flex;
             flex-wrap: wrap;
             width: 95%;
@@ -155,8 +155,12 @@
         transition: transform 300ms;
         position: relative;
 
-        @include media-query(medium) {
+        @include media-query(small) {
             width: 47%;
+            height: 200px;
+        }
+        @include media-query(medium) {
+            height: 251px;
         }
         @include media-query(large) {
             width: 31%;
@@ -186,7 +190,13 @@
         border-radius: px-to-em(30) px-to-em(30) 0 0;
         @include home-image-card;
         @include new-restaurant;
-        
+
+        @include media-query(small) {
+            height: 120px;
+        }
+        @include media-query(medium) {
+            height: 175px;
+        }
         @include media-query(large) {
             background-position: 50% 60%;
         }
