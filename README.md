@@ -49,7 +49,7 @@ __*ohmyfood*__ is the third project I made during this training. As a junior dev
 🕹️ __*ohmyfood*__ use open source projects to work properly:
 
 - [Sass](https://sass-lang.com/) - CSS enhanced for web apps!
-- [node.js](https://nodejs.org/en/) - To create the project and add depencies
+- [node.js](https://nodejs.org/en/) - To create the project and add dependencies
 
 [Back to the top](#ohmyfood)
 

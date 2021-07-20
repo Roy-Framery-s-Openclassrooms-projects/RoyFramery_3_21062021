@@ -29,7 +29,7 @@ $timing: cubic-bezier(.37,0,.2,.99);
     }
 }
 header, main, footer {
-    animation: blur 3000sm;
+    animation: blur 3000ms;
 }
 body{
     animation: disable-scroll 3000ms;
